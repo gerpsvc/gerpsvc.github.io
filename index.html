@@ -9,10 +9,11 @@
 
 	function fnMoveToPassword(){ if(event.keyCode == 13) document.getElementById("pw").focus();	}
 	function fnMoveToButton(){ if(event.keyCode == 13) document.getElementById("btnLogin").focus();	}
-  function validateEncrptedForm(){ if(event.keyCode == 13) alert("Login Success");	}
+  function fnTest(){ alert("Login Success");	}
 </script>	
 </head>
 	<body id="bground">
+	<h1> Welcome Mobile Test Page</h1>
 			<table>
 				<tr>
 					<td class="menu_label" align="right">ID</td>
@@ -27,7 +28,7 @@
 					</td>
 				</tr>
 			</table>
-			<input type="button" id="btnLogin" class="button_login" value="Login" onclick="validateEncrptedForm()">
+			<input type="button" id="btnLogin" class="button_login" value="Login" onclick="fnTest()">
 	</div>	
 </body>
 </html>
