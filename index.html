@@ -1,12 +1,33 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">    
-    <title>Window Mobile Test Page by gerpsvc</title>
-    <script src="javascripts/respond.js"></script>
-  </head>
-  <body>
-    
-  </body>
+<head>
+<title>LGE GERP Mobile</title>
+<script language="javascript">
+	window.onload = function() {
+		document.getElementById("loginId").focus();
+	};
+
+	function fnMoveToPassword(){ if(event.keyCode == 13) document.getElementById("pw").focus();	}
+	function fnMoveToButton(){ if(event.keyCode == 13) document.getElementById("btnLogin").focus();	}
+  function validateEncrptedForm(){ if(event.keyCode == 13) alert("Login Success");	}
+</script>	
+</head>
+	<body id="bground">
+			<table>
+				<tr>
+					<td class="menu_label" align="right">ID</td>
+					<td align="left">
+						<input type="text" id="loginId" name="loginId" maxlength="16" value="" class="input_login" onkeyup="fnMoveToPassword()" />
+					</td>
+				</tr>
+				<tr>
+					<td class="menu_label" align="right">PW</td>
+					<td align="left">
+						<input type="password" id="pw" name="pw" maxlength="16" value="" class="input_login" onblur="gfnInputBlur(this)" onfocus="gfnInputFocus(this)"  onkeyup="if(event.keyCode==13) validateEncrptedForm();" />
+					</td>
+				</tr>
+			</table>
+			<input type="button" id="btnLogin" class="button_login" value="Login" onclick="validateEncrptedForm()">
+	</div>	
+</body>
 </html>
